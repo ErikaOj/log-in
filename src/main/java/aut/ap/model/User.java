@@ -24,7 +24,6 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    // Constructors
     public User() {}
 
     public User(String firstName, String lastName, int age, String email, String password) {
