@@ -33,7 +33,6 @@ public class Main {
             boolean registered = authService.register(newUser);
 
             if (!registered) {
-                // در صورتی که ثبت‌نام ناموفق بود، برنامه متوقف می‌شود
                 return;
             }
 
