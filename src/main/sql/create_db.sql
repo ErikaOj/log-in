@@ -1,5 +1,5 @@
-CREATE database IF NOT EXISTS kind_hoover;
-USE kind_hoover;
+CREATE database IF NOT EXISTS loving_montalcini;
+USE loving_montalcini;
 
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,

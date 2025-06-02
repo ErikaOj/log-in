@@ -9,13 +9,13 @@
             com.mysql.cj.jdbc.Driver
         </property>
         <property name="hibernate.connection.url">
-            jdbc:mysql://manaslu.liara.cloud:30163/kind_hoover
+            jdbc:mysql://lhotse.liara.cloud:32802/loving_montalcini
         </property>
         <property name="hibernate.connection.username">
             root
         </property>
         <property name="hibernate.connection.password">
-            LrnrKbHy0tzYMzsGTB18gGFQ
+            qIqKnq0zIHZ3RgyNxeG6c93i
         </property>
         <!-- Hibernate settings -->
         <property name="hibernate.show_sql">true</property>

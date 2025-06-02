@@ -3,7 +3,7 @@ package aut.ap;
 import aut.ap.model.User;
 import aut.ap.service.AuthService;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,25 +16,36 @@ public class Main {
         if (choice.equals("s") || choice.equals("sign up")) {
             System.out.print("First Name: ");
             String firstName = scn.nextLine();
+
             System.out.print("Last Name: ");
             String lastName = scn.nextLine();
+
             System.out.print("Age: ");
             int age = Integer.parseInt(scn.nextLine());
+
             System.out.print("Email: ");
-            String email = scn.nextLine();
+            String email = scn.nextLine().trim();
+
             System.out.print("Password: ");
             String password = scn.nextLine();
 
             User newUser = new User(firstName, lastName, age, email, password);
-            authService.register(newUser);
+            boolean registered = authService.register(newUser);
+
+            if (!registered) {
+                // در صورتی که ثبت‌نام ناموفق بود، برنامه متوقف می‌شود
+                return;
+            }
 
         } else if (choice.equals("l") || choice.equals("login")) {
             System.out.print("Email: ");
-            String email = scn.nextLine();
+            String email = scn.nextLine().trim();
+
             System.out.print("Password: ");
             String password = scn.nextLine();
 
             User user = authService.login(email, password);
+
             if (user != null) {
                 System.out.println("Welcome, " + user.getFirstName() + " " + user.getLastName() + "!");
             } else {
